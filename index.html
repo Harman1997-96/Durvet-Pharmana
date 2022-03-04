@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photoweb</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="logo navbar-brand" href="#">
+            <img src="./img/logo.png" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="menu">
+              <a href="#">Home</a>
+              <!-- <a href="./component/about.html">About</a>s -->
+              <a href="./component/carrier.html">Carrier</a>
+
+              <a href="./component/contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="h-text">
+        <i class="fa fa-medkit" id="camera"></i>
+        <h1 data-aos="zoom-in-down" data-aos-delay="100">
+          Always remember the privilege it is to be a physician
+        </h1>
+      </section>
+    </header>
+
+    <section class="filter-gallery">
+      <div class="portfolio-menu">
+        <ul>
+          <li class="active" data-filter="*">Products</li>
+        </ul>
+      </div>
+      <div class="portfolio-item">
+        <div
+          class="item web"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <img src="img/A1.jpeg" width="100" height="100" />
+        </div>
+
+        <div
+          class="item seo"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        >
+          <img src="img/A2.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item graphics"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        >
+          <img src="img/a3.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item web"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <img src="img/A4.jpeg" width="100" height="100" />
+        </div>
+
+        <div
+          class="item seo"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        >
+          <!-- A5 -->
+          <!-- <img src="img/a5.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item seo"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        > -->
+          <img src="img/A6.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item graphics"
+          data-aos="zoom-in-up"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <img src="img/a7.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item graphics"
+          data-aos="zoom-in-up"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        >
+          <!-- A8 -->
+          <!-- <img src="img/a8.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item graphics"
+          data-aos="zoom-in-up"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        > -->
+          <img src="img/a9.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item web"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <!-- A10 -->
+          <!-- <img src="img/a10.jpeg" width="100" height="100" />
+        </div>
+
+        <div
+          class="item seo"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        > -->
+          <img src="img/a11.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item graphics"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        >
+          <img src="img/a12.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item web"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <img src="img/a13.jpeg" width="100" height="100" />
+        </div>
+
+        <div
+          class="item seo"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        >
+          <img src="img/a14.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item seo"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        >
+          <img src="img/a15.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item web"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <img src="img/a16.jpeg" width="100" height="100" />
+        </div>
+
+        <div
+          class="item seo"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        >
+          <img src="img/a17.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item graphics"
+          data-aos="flip-left"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        >
+          <img src="img/a18.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item web"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="100"
+        >
+          <img src="img/a19.jpeg" width="100" height="100" />
+        </div>
+
+        <div
+          class="item seo"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="200"
+        >
+          <img src="img/a21.jpeg" width="100" height="100" />
+        </div>
+        <div
+          class="item seo"
+          data-aos="zoom-in"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        >
+          <img src="img/a23.jpeg" width="100" height="100" />
+        </div>
+      </div>
+    </section>
+
+    <section class="members">
+      <div
+        class="member-info"
+        data-aos="zoom-in-up"
+        data-aos-offset="100"
+        data-aos-delay="100"
+      >
+        <h1>
+          Our
+          <span>Informations</span>
+        </h1>
+        <p>What our Client says</p>
+      </div>
+
+      <div
+        class="member-card"
+        data-aos="zoom-in-down"
+        data-aos-offset="100"
+        data-aos-delay="300"
+      >
+        <img src="img/a8.jpeg" style="width: 100%;" />
+        <p>
+          From Rajasthan,doing gym is good for healthy life. it helps our body
+          to fit. it release stress from our mind.From Rajasthan,doing is good
+          for healthy life. it helps our body to fit. it release stress from our
+          mind.
+        </p>
+        <h2>* Maria Sharapova</h2>
+
+        <!-- <img src="img/icon1.png" width="100" />
+        <img src="img/icon2.png" width="100" />
+        <img src="img/icon3.png" width="100" />
+        <img src="img/icon4.png" width="100" /> -->
+      </div>
+      <div
+        style="marsgin-top: 5%;"
+        class="member-info"
+        data-aos="zoom-in-up"
+        data-aos-offset="100"
+        data-aos-delay="100"
+      >
+        <h1>
+          Our
+          <span>Target</span>
+        </h1>
+        <p class="member-card">
+          Mankind Pharma came into existence in 1986 and became a
+          fully-integrated pharma company in 1995. Today, we are one of the
+          leading Indian pharma companies and strive to provide world-class
+          medications at affordable prices.
+        </p>
+      </div>
+
+      <div class="count_employee container">
+        <div class="row">
+          <div class="coutr-box col">
+            60+
+            <span>employess</span>
+          </div>
+          <div class="coutr-box col">
+            3+
+            <span>Countries</span>
+          </div>
+          <div class="coutr-box col">
+            35
+            <span>cr</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="m-images"
+        data-aos="zoom-in"
+        data-aos-offset="100"
+        data-aos-delay="300"
+      >
+        <img src="img/a24.jpeg" />
+        <img src="img/a23.jpeg" />
+        <img src="img/a22.jpeg" />
+        <img src="img/a19.jpeg" />
+        <img src="img/a18.jpeg" />
+        <img src="img/a17.jpeg" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-color">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fa fa-medkit"></i>
+                Company name
+              </h6>
+              <p>
+                Mankind Pharma came into existence in 1986 and became a
+                fully-integrated pharma company in 1995. Today, we are one of
+                the leading Indian pharma companies
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Duracillin</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Durazym</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Duraboost-XL</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Mecofast</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Contact
+              </h6>
+              <p>
+                <i class="fa fa-home me-3"></i>
+                New York, NY 10012, US
+              </p>
+              <p>
+                <i class="fa fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p>
+                <i class="fa fa-phone me-3"></i>
+                + 01 234 567 88
+              </p>
+              <p>
+                <i class="fa fa-print me-3"></i>
+                + 01 234 567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05);"
+      >
+        © 2021 Copyright.All Rights Reverved by DURAZYM
+        <a
+          class="text-reset fw-bold"
+          href="https://www.linkedin.com/in/harmandeep-singh-5b0b61209/"
+        >
+          <span>
+            Website Designed & Developed by Harmandeep Singh
+          </span>
+        </a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+      $('.portfolio-item').isotope({
+        // options
+        itemSelector: '.item',
+        layoutMode: 'fitRows',
+      })
+      $('.portfolio-menu ul li').click(function () {
+        $('.portfolio-menu ul li').removeClass('active')
+        $(this).addClass('active')
+
+        var selector = $(this).attr('data-filter')
+        $('.portfolio-item').isotope({
+          filter: selector,
+        })
+        return false
+      })
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+    <script type="text/javascript">
+      function sendEmail() {
+        let userEmail = document.getElementById('userEmail').value
+        Email.send({
+          Host: 'smtp.gmail.com',
+          Username: 'harmansoftwaredeveloper@gmail.com',
+          Password: 'uffxebsdicpdcctw',
+          To: userEmail,
+          From: 'harmansoftwaredeveloper@gmail.com',
+          Subject: 'Job',
+          Body: 'Body',
+        }).then((message) => alert(message))
+      }
+    </script>
