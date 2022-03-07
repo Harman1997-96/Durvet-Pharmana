@@ -4,27 +4,449 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-  </head>
-  <body>
-    <form>
-      <input type="email" name="userEmail" id="userEmail" />
-      <input type="button" value="send Email" onclick="sendEmail()" />
-    </form>
-    <script type="text/javascript">
-      function sendEmail() {
-        let userEmail = document.getElementById('userEmail').value
-        Email.send({
-          Host: 'smtp.gmail.com',
-          Username: 'harmansoftwaredeveloper@gmail.com',
-          Password: 'uffxebsdicpdcctw',
-          To: userEmail,
-          From: 'harmansoftwaredeveloper@gmail.com',
-          Subject: 'Job',
-          Body: 'Body',
-        }).then((message) => alert(message))
+    <title>Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="../style.css" > -->
+    <link rel="stylesheet" href="./carrier.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      span,
+      p {
+        font-family: sans-serif;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      body {
+        background-color: #e9ecef;
+      }
+
+      #load {
+        transition: 2s;
+        margin-top: 5px;
+        margin-bottom: 1px;
+        position: absolute;
+        left: 110px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: grey solid 5px;
+        display: none;
+        outline: none;
+        border-top: lightskyblue 5px solid;
+        animation: loading infinite 0.6s;
+        animation-timing-function: linear;
+      }
+
+      @keyframes loading {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .contact {
+        margin-bottom: 30px;
+        /* position: relative; */
+        min-height: auto;
+        padding-top: 40px;
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url();
+        background-size: cover;
+      }
+
+      .contact .content {
+        max-width: 800px;
+        text-align: center;
+      }
+
+      .contact .content h2,
+      .contact .contact h1 {
+        font-size: 36px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+      }
+
+      .contact .content p {
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+      }
+
+      .containor {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .containor .contactinfo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .containor .contactinfo .box {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+      }
+
+      .containor .contactinfo .box {
+        min-width: 60px;
+        height: 60px;
+      }
+
+      .containor .contactinfo .box .text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        flex-direction: column;
+        font-weight: 300;
+      }
+
+      .box {
+        display: block;
+      }
+
+      .containor .contactinfo .box .text h3 {
+        font-weight: 500;
+        color: #00bcd4;
+      }
+
+      .contactForm {
+        width: 50%;
+        padding: 70px;
+        background: #fff;
+      }
+
+      .contactForm h2 {
+        font-size: 30px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .contactForm .inputBox {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      .contactForm .inputBox input,
+      .contactForm .inputBox textarea {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid #333;
+        outline: none;
+        resize: none;
+      }
+
+      .contactForm .inputBox span[class='span'] {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666;
+      }
+
+      .contactForm .inputBox input:focus ~ span,
+      .contactForm .inputBox input:valid ~ span,
+      .contactForm .inputBox textarea:focus ~ span,
+      .contactForm .inputBox textarea:valid ~ span {
+        color: #000000;
+        font-size: 12px;
+        transform: translateY(-20px);
+      }
+
+      .contact p,
+      .contact h2,
+      .contact h3 {
+        z-index: -2;
+      }
+
+      .contactForm .inputBox button[type='submit'] {
+        opacity: 0.6;
+        width: 100px;
+        background: #00bcd4;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        transition: all ease 0.5s;
+      }
+
+      .contactForm .inputBox button[type='submit']:hover {
+        transition: 0.3s;
+        opacity: 1;
+      }
+
+      @media (max-width: 800px) {
+        .contact {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .containor {
+          flex-direction: column;
+        }
+
+        .containor .contactinfo {
+          margin-bottom: 40px;
+        }
+
+        .containor .contactinfo {
+          padding-left: 10px;
+          width: auto;
+        }
+
+        .contactForm {
+          /* padding-left: 50px; */
+          width: auto;
+        }
+      }
+
+      @media (max-width: 352px) {
+        .containor .contactinfo .box {
+          display: none;
+        }
+      }
+
+      @media (min-width: 353px) {
+        .containor .contactinfo .box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Contact_us starts-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="logo navbar-brand" href="../index.html">
+            <img src="../img/logo.png" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="menu">
+              <a href="../index.html">Home</a>
+              <a href="./carrier.html">Career</a>
+
+              <a href="./contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="contact">
+      <div class="content">
+        <!-- <h1>Carrier</h1> -->
+        <div class="h3">
+          <h2 style="font-weight: 100; padding-top: 20px;">
+          Want to  Join Us
+          </h2>
+        </div>
+      </div>
+      <div class="containor">
+        <div class="contactForm">
+          <form action="javascript:sendemail()" method="POST" id="form">
+            <h2>Apply Here</h2>
+            <div class="inputBox">
+              <input
+                type="text"
+                name="Name"
+                id="Name"
+                required="required"
+                autocomplete="off"
+                placeholder="Full Name"
+              />
+              <input
+                type="number"
+                name="Phone Number"
+                id="Name"
+                required="required"
+                autocomplete="off"
+                placeholder="Phone Number"
+              />
+            </div>
+
+            <div class="inputBox">
+              <input
+                type="text"
+                name="Email"
+                id="Email"
+                required="required"
+                autocomplete="off"
+                placeholder="Email ID"
+              />
+            </div>
+            <div class="inputBox">
+              <textarea
+                type="text"
+                required="required"
+                name="message"
+                id="message"
+                autocomplete="off"
+                placeholder="Type your Message"
+              ></textarea>
+            </div>
+            <div class="inputBox">
+              <label for="experience">Experience</label>
+              <select name="cars" id="cars">
+                <option value="Fresher">Fresher</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <!-- <div class="inputBox"> -->
+              <!-- <label for="cars">Choose a car:</label> -->
+              <!-- Upload
+              <input type="file" multiple />
+            </div> -->
+            <div class="inputBox">
+              <!-- <button type="submit" value="Submit" class="button"> -->
+               <h4>
+                Share Your Resume 
+               </h4> 
+              <!-- </button> -->
+              <a href="mailto:durvetpharmaindia@gmail.com?subject=Testing out mailto!&body=This is only a test!" >
+                <p>
+                  <i class="fa fa-envelope me-3"></i>
+                  durvetpharmaindia@gmail.com
+                </p>
+              </a>
+              <!-- <a href="mailto:test@example.com?subject=Testing out mailto!&body=This is only a test!">Second Example</a> -->
+
+              <!-- <a href="" class="me-4 text-reset">
+                <i class="fa fa-gmail">
+                  durvetpharmaindia@gmail.com
+                </i> -->
+              </a>
+              <span id="load"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="containor">
+        <div class="contactForm">
+          <div class="img-carrier">
+            <img src="../img/contact-img.jpg" height="400px" width="100%" />
+          </div>
+          <div class="inputBox">
+            <button
+              type="submit"
+              value="Submit"
+              class="button"
+              style="width: auto;"
+              
+            >
+              Apply Here
+            </button>
+
+            <span id="load"></span>
+          </div>
+        </div>
+      </div> -->
+    <!-- contact us ends -->
+
+    <!-- script starts -->
+
+    <!--this is essential to link this smtp and jquery cdn link-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbz8wQSLWnIL6JmE_5Vbnh1PFPiioDxutbHPgEzYs9ht6nJOfQp3UU0uN0If4fWyWrSx/exec'
+      const form = document.forms['google-sheet']
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) =>
+            $('#form_alerts').html(
+              "<div class='alert-success'>Contact Message sent Successfully.</div>",
+            ),
+          )
+          .catch((error) =>
+            $('#form_alerts').html(
+              "<div class='alert-Danger'>Not Succeess.</div>",
+            ),
+          )
+      })
     </script>
+
+    <!--script ends-->
   </body>
 </html>

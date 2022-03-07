@@ -18,7 +18,7 @@ header {
 nav {
   margin: auto;
   width: 100%;
-  height: 80px;
+  height: 170px;
   background: white;
   color: black;
   display: flex;
@@ -147,3 +147,11 @@ footer {
   background-color: #e74c3c;
   color: #fff;
 }
+/* @media screen and (max-width: 600px) {
+  .menu a {
+    color: #fff;
+    background-color: #000;
+    width: 55px;
+    height: 555px;
+  }
+} */
