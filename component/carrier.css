@@ -46,9 +46,9 @@ nav {
 .menu a {
   text-decoration: none;
   color: black;
-  font-size: 40px;
+  font-size: 22px;
 
-  padding: 10px 20px;
+  padding-right: 2px;
   font-family: sans-serif;
 }
 .menu a:first-child {
